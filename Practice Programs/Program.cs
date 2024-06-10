@@ -8,13 +8,19 @@ namespace MainSpace
         static void Main(string[] args)
         {
             BasicPrograms obj = new BasicPrograms();
-            //obj.EvenOrOdd();
-            //obj.OddNumbersInRange();
-            //obj.PositivOrNegative();
-            //obj.SwapNumbers();
-            //obj.multipleOf3and5();
-            // obj.SumOfDigits();
+
+            /* --- Numbers ---
+             
+            obj.EvenOrOdd();
+            obj.OddNumbersInRange();
+            obj.PositivOrNegative();
+            obj.SwapNumbers();
+            obj.multipleOf3and5();
+             obj.SumOfDigits();
             obj.ReverseNumber();
+            */
+
+            //Strings
 
         }
     }

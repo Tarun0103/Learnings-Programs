@@ -1,0 +1,8 @@
+1. Concat two strings
+string s1 = "Good";
+string s2 ="Morning";
+string s3=string.Concat(s1, s2);
+
+ 2. str.ToLower() 
+
+ 3. 
