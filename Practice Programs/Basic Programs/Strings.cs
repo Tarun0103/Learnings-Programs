@@ -8,6 +8,11 @@ namespace Practice_Programs.Basic_Programs
 {
     public class StringsPrograms
     {
+        public StringsPrograms()
+        {
+            Console.WriteLine("Enter String : ");
+
+        }
         public void ReverseStringUsingArray()
         {
             String InputStr = Console.ReadLine();
@@ -40,6 +45,33 @@ namespace Practice_Programs.Basic_Programs
                 len++;
             }
             Console.WriteLine($"Count is {count}");
+
+            Console.Write("Enter the string : ");
+
+            string inputString = Console.ReadLine();
+
+            int result = 0;
+            //Trim whitespace from beginning and end of string
+
+            inputString = inputString.Trim();
+            //Necessary because foreach will execute once with empty string returning 1
+
+            if (inputString == "")
+
+                Console.WriteLine(0);
+            //Ensure there is only one space between each word in the passed string
+
+            while (inputString.Contains("  "))
+
+                inputString = inputString.Replace("  ", " ");
+
+            //Count the words
+
+            foreach (string y in inputString.Split(' '))
+            result++;
+            Console.WriteLine("Number of words is : " + result);
+
+            Console.ReadLine();
         }
 
         public void CountOfCharacters()
@@ -60,6 +92,71 @@ namespace Practice_Programs.Basic_Programs
                     Console.WriteLine("Occurance of character " + items.Key + " is " + items.Value);
                 }
                 
+            }
+
+            //Console.Write("Enter the string : ");
+
+            //string inputString = Console.ReadLine();
+
+            //inputString = inputString.Replace(" ", string.Empty);
+
+
+
+            //while (inputString.Length > 0)
+            //{
+
+            //    Console.Write(inputString[0] + " : ");
+
+            //    int count = 0;
+
+            //    for (int j = 0; j < inputString.Length; j++)
+
+            //    {
+
+            //        if (inputString[0] == inputString[j])
+            //        {
+
+            //            count++;
+
+            //        }
+
+            //    }
+
+            //    Console.WriteLine(count);
+
+            //    inputString = inputString.Replace(inputString[0].ToString(), string.Empty);
+
+            //}
+
+        }
+
+        public void RemoveDuplicatesInString()
+        {
+            Console.WriteLine("Enter String : ");
+            String StrInput = Convert.ToString(Console.ReadLine());
+            for(int i = 0; i < StrInput.Length; i++)
+            {
+                
+            }
+        }
+        public void FindAllSubString()
+        {
+            String inputStr = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("Substrings are : ");
+            for (int i = 0; i < inputStr.Length; i++)
+            {
+                Dictionary<int, string> dictCompare = new Dictionary<int, string>();
+                int k = 0;
+                for (int j = 0; j < inputStr.Length - i; j++)
+                {
+                    string substring = inputStr.Substring(j, i);
+                    if (!dictCompare.ContainsValue(substring))
+                    {
+                        dictCompare.Add(k, substring);
+                        k++;
+                        Console.WriteLine(substring);
+                    }
+                }
             }
         }
     }

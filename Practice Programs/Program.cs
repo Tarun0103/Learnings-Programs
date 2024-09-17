@@ -27,6 +27,9 @@ namespace MainSpace
             //sp.ReverseStringUsingArray();
             //sp.CountWordsInString();
             //sp.CountOfCharacters();
+            //sp.FindAllSubString();
+            sp.CountCharInString();
+            
 
             //Numbers
             NumbersPrograms np = new NumbersPrograms();
